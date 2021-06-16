@@ -16,6 +16,7 @@ import { FaqComponent } from './faq/faq.component';
 import { SallesComponent } from './salles/salles.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselNewsComponent } from './carousel-news/carousel-news.component';
 import { ReservationComponent } from './Remplissage/reservation/reservation.component';
 import { DescriptionComponent } from './description/description.component';
 
@@ -38,6 +39,7 @@ import { IntroComponent } from './intro/intro.component';
     FaqComponent,
     SallesComponent,
     CarouselComponent,
+    CarouselNewsComponent,
     ReservationComponent,
     DescriptionComponent,
     IntroComponent,
