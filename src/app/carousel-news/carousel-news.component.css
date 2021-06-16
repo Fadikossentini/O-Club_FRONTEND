@@ -4,10 +4,15 @@
   margin-left: auto;
   margin-right: auto;
 }
-.carousel-item {
-  height: 100vh;
-}
 
+.carousel-caption {
+  right: 0;
+  left: 0;
+  bottom: 0px;
+  background-image: linear-gradient(transparent, white);
+  padding-bottom: 40px;
+  padding: 60px 0;
+}
 h2 {
   text-align: center;
   color: white;
