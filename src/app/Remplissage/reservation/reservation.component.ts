@@ -49,6 +49,46 @@ export class ReservationComponent implements OnInit {
     );
   }
 
+  async save() {
+    var date_soumission = '2021-06-16';
+    var date_debut = '2021-06-16';
+    var date_fin = '2021-06-16';
+    var etat = 'valide';
+    var nom_event = this.obj.nom;
+    var type_event = 'Hackathon';
+    var id_club = 1;
+    var id_type = 1;
+    console.log('this is working');
+
+    try {
+      const res = await fetch('http://127.0.0.1:8080/api/reservation', {
+        method: 'POST',
+        body: JSON.stringify({
+          date_soumission,
+          date_debut,
+          date_fin,
+          etat,
+          nom_event,
+          type_event,
+          id_club,
+          id_type,
+        }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      const data = await res.json();
+      console.log(data);
+      if (data.errors) {
+        // emailError.textContent = data.errors.email;
+        // passwordError.textContent = data.errors.password;
+      }
+      if (data.user) {
+        window.location.assign('/');
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   closeAlert() {
     this.alert = false;
   }

@@ -1,5 +1,10 @@
 <div id="container">
-  <form #ngform action="/" method="POST">
+  <form
+    #ngform
+    action="http://127.0.0.1:8080/api/reservation"
+    method="POST"
+    (ngSubmit)="save()"
+  >
     <h1>Réserver une salle</h1>
 
     <label
