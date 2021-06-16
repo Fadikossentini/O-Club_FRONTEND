@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
 import { LoginInterceptor } from './interceptor/login.interceptor';
 import { LoginGuard } from './guards/login.guard';
 import { LogoutGuard } from './guards/logout.guard';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { LogoutGuard } from './guards/logout.guard';
     CarouselComponent,
     ReservationComponent,
     DescriptionComponent,
+    IntroComponent,
   ],
   imports: [
     BrowserModule,
