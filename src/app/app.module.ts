@@ -26,7 +26,6 @@ import { LoginInterceptor } from './interceptor/login.interceptor';
 import { LoginGuard } from './guards/login.guard';
 import { LogoutGuard } from './guards/logout.guard';
 import { IntroComponent } from './intro/intro.component';
-import { OurClubsComponent } from './our-clubs/our-clubs.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +43,6 @@ import { OurClubsComponent } from './our-clubs/our-clubs.component';
     ReservationComponent,
     DescriptionComponent,
     IntroComponent,
-    OurClubsComponent,
   ],
   imports: [
     BrowserModule,
