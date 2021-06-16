@@ -30,6 +30,15 @@
       required
     />
 
+    <label><b>Date soumission</b></label>
+    <input
+      type="date"
+      placeholder="Entrer l'identifiant du club"
+      name="date"
+      [(ngModel)]="dateS"
+      required
+    />
+
     <label
       ><b>Durée de la réservation</b>
       <input
@@ -41,9 +50,9 @@
         required
     /></label>
     <datalist id="durée">
-      <option value="1 jour"></option>
-      <option value="2 jours"></option>
-      <option value="3 jours"></option>
+      <option value="1"></option>
+      <option value="2"></option>
+      <option value="3"></option>
     </datalist>
 
     <label><b>Nom de l'événement</b></label>
@@ -64,20 +73,18 @@
       required
     />
 
-    <label><b>Identifiant du club</b></label>
     <input
-      type="password"
-      placeholder="Entrer l'identifiant du club"
-      name="id_club"
-      [(ngModel)]="id_club"
-      required
-    />
-
-    <input
+      data-toggle="modal"
+      data-target="#exampleModal"
       type="submit"
       id="submit"
       (click)="send()"
       value="Envoyer la demande"
     />
+
+    <div *ngIf="alert" class="alert alert-dark" role="alert">
+      Félicitations! Votre demande a été envoyée aux autorités. Une réponse vous
+      sera transmise.
+    </div>
   </form>
 </div>
