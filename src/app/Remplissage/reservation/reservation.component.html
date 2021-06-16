@@ -1,0 +1,83 @@
+<div id="container">
+  <form #ngform action="/" method="POST">
+    <h1>Réserver une salle</h1>
+
+    <label
+      ><b>Type de la salle</b>
+      <input
+        type="text"
+        list="type"
+        placeholder="Séléctionnez le type de la salle"
+        [(ngModel)]="id_type"
+        name="salle"
+        required
+    /></label>
+    <datalist id="type">
+      <option value="Auditaurium" id="AUDITO"></option>
+      <option value="Salle de conférance" id="CONFERENCE"></option>
+      <option value="Salle de lecture" id="SL"></option>
+      <option value="Amphi" id="AMPPHI"></option>
+      <option value="Salle normale" id="TD"></option>
+      <option value="Espace coworking" id="COWORKING"></option>
+    </datalist>
+
+    <label><b>Date de la réservation</b></label>
+    <input
+      type="date"
+      placeholder="Entrer la date de la réservation"
+      [(ngModel)]="date"
+      name="date"
+      required
+    />
+
+    <label
+      ><b>Durée de la réservation</b>
+      <input
+        type="text"
+        list="durée"
+        placeholder="Séléctionner la durée de la réservation"
+        [(ngModel)]="duree"
+        name="duree"
+        required
+    /></label>
+    <datalist id="durée">
+      <option value="1 jour"></option>
+      <option value="2 jours"></option>
+      <option value="3 jours"></option>
+    </datalist>
+
+    <label><b>Nom de l'événement</b></label>
+    <input
+      type="text"
+      placeholder="Entrer le nom de l'événement"
+      name="nom"
+      [(ngModel)]="nom"
+      required
+    />
+
+    <label><b>Type de l'événement</b></label>
+    <input
+      type="text"
+      placeholder="Entrer le type de l'événement"
+      name="type_event"
+      [(ngModel)]="type_event"
+      required
+    />
+
+    <label><b>Identifiant du club</b></label>
+    <input
+      type="password"
+      placeholder="Entrer l'identifiant du club"
+      name="id_club"
+      [(ngModel)]="id_club"
+      required
+    />
+
+    <input
+      type="submit"
+      id="submit"
+      (click)="send()"
+      value="Envoyer la demande"
+    />
+  </form>
+</div>

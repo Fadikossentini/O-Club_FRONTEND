@@ -1,0 +1,38 @@
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<nav class="fix-me navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="/">Ô-Club</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Acceuil</a></li>
+      <li><a href="#info-section">Les salles</a></li>
+      <li><a routerLink="/reservation">Réservation</a></li>
+      <li><a routerLink="/faq">FAQ</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngIf="!authService.isLogged()">
+        <a routerLink="/register"
+          ><span class="glyphicon glyphicon-user"></span> S'inscrire</a
+        >
+      </li>
+      <li *ngIf="!authService.isLogged()" (click)="test()">
+        <a routerLink="/login"
+          ><span class="glyphicon glyphicon-log-in"></span> S'authentifier
+        </a>
+      </li>
+
+      <li *ngIf="authService.isLogged()">
+        <a (click)="logout()"
+          ><span class="glyphicon glyphicon-log-out"></span> Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

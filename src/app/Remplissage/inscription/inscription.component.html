@@ -1,0 +1,72 @@
+<div id="container">
+  <!-- zone de connexion -->
+
+  <form action="verification.php" method="POST">
+    <h1>S'inscrire</h1>
+
+    <label><b>Nom du club</b></label>
+    <input
+      type="text"
+      placeholder="Entrer le nom du club"
+      name="nomclub"
+      [(ngModel)]="nomC"
+      required
+    />
+
+    <label><b>Date de fondation</b></label>
+    <input
+      type="date"
+      placeholder="Date de fondation du club"
+      name="datefondation"
+      required
+      [(ngModel)]="dateF"
+    />
+
+    <label><b>Description</b></label>
+    <input
+      type="text"
+      placeholder="Entrer la description du club"
+      name="descriptionclub"
+      [(ngModel)]="description"
+      required
+    />
+
+    <label><b>Mot de passe</b></label>
+    <input
+      type="password"
+      placeholder="Entrer votre mot de passe"
+      name="password"
+      [(ngModel)]="pwd"
+      required
+    />
+    <label><b>Nom du président</b></label>
+    <input
+      type="text"
+      placeholder="Entrer le nom du président"
+      name="nomprésident"
+      [(ngModel)]="nomP"
+      required
+    />
+
+    <label><b>Mail du président</b></label>
+    <input
+      email
+      type="text"
+      placeholder="Entrer l'email du président"
+      name="email"
+      [(ngModel)]="email"
+      required
+    />
+
+    <label><b>Numéro de téléphone</b></label>
+    <input
+      type="text"
+      placeholder="Entrer le numéro du président"
+      name="numéro"
+      [(ngModel)]="numtel"
+      required
+    />
+
+    <input type="submit" id="submit" (click)="send()" value="Inscription" />
+  </form>
+</div>

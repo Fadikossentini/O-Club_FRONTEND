@@ -1,0 +1,19 @@
+.fix-me {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  flex-direction: row;
+  z-index: 99;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row !important;
+}
+
+div {
+  background-color: #313646;
+}
+.navbar-inverse {
+  background-color: #313646;
+  border-color: #313646;
+}
