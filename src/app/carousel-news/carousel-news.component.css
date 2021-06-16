@@ -1,10 +1,16 @@
-#carous-container {
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .carousel-item {
-    height: 98vh;
-  }
-  
+.carous-container {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel-item {
+  height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  text-decoration: whitesmoke;
+  font-size: gras;
+}
