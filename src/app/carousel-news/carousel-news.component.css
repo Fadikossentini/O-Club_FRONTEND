@@ -19,3 +19,8 @@ h2 {
   text-decoration: whitesmoke;
   font-size: gras;
 }
+
+.w-100, .d-block {
+  height: 40rem;
+  object-fit: cover;
+}
